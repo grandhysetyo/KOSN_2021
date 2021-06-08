@@ -1,4 +1,8 @@
 
+html, body{
+    overflow-x: hidden;
+    font-family: 'Exo', sans-serif;
+}
 .navbar-brand .logo{
     width: 150px;    
 }
@@ -47,11 +51,12 @@ section{
 }
 .title-section {             
     position: relative;
-    display:inline-block;
-    top: -25px;
+    display:inline-block;   
     padding: 10px 30px 10px 80px;
     z-index: 1;
     color: #fff;
+    margin-bottom: 50px;
+    font-weight: 700;
 }
 .title-section::before{
     background-color: #FF9517;
@@ -79,6 +84,11 @@ section{
     -o-transform: skew(333deg); 
     z-index: -1;
 } 
+.title-section2 {             
+    color: #1f1f1f;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
 /* BANNER */
 .banner{
     background-image: url('/assets/images/bg-header.png');
@@ -94,23 +104,37 @@ section{
 .text-banner img{
     width: 100%;
 }
+.text-banner h1{    
+    font-weight: 800;
+    font-style: italic;
+    text-shadow: -3px 2px #669c20;
+}
+.text-banner p{
+    font-weight: 500;
+}
 .text-banner hr{
     border-top: 1px solid #fff;
 }
 .hero img{
     width: 100%;
 }
-
+/* TENTANG & PEDOMAN*/
 .text-tentang a{
     color: blueviolet;
     font-weight: 500;
+    display: block;
+    margin-bottom: 50px;    
 }
-
+.text-tentang p{
+    font-weight: 500;
+    color: #6b6b6b;
+}
 .pedoman a{
     display: block;
     padding: 10px 50px 10px 30px;
     margin-bottom: 10px;
     color: #fff;
+    font-weight: 500;
 }
 .pedoman a:hover{
     text-decoration: none;
@@ -129,7 +153,140 @@ section{
     background-color: #0093c9;
 }
 
-                   
+/* VIDEO SLIDER */
+.video{
+    background-image: url('/assets/images/bg-video.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.slider-video{
+    width: 100%;
+    height: 230px;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.text-video h1{
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+.text-video a{
+    margin-top: 10px;
+    padding: 5px 24px;
+    background-color: #DD6D22;
+    color: #fff;
+    font-weight: 600;
+}
+.text-video a:hover{
+    background-color: #bb5613;
+    text-decoration: none;
+    color: #fff;
+}
+/* BIDANG */
+.bidang .col-md-3{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.img-bidang{
+    display: block;
+    height: 320px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.card-bidang{
+    height: 100%;
+}
+.img-card{
+    width: 100%;
+    display: block;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;            
+}
+.bdg-karate{
+    display: flex;
+    flex-direction: column;
+    background-color: #669c20;
+    height: 50%;
+    padding: 15%;
+}
+.bdg-karate a{
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-weight: 600;
+    color: #fff;
+}
+.bdg-silat{
+    display: flex;
+    flex-direction: column;
+    background-color: #00ADEE;
+    height: 50%;
+    padding: 15%;
+}
+.bdg-silat a{
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-weight: 600;
+    color: #fff;
+}
+/* PENGUMUMAN */
+.box-pengumuman{
+    width: 100%;
+    height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.box-pengumuman a{
+    display: block;
+    padding: 8px 45px;
+    margin: 23px 0;
+    color: #fff;
+    background-color: #FF9517;
+    opacity: 0.5;
+}
+.box-pengumuman a:hover{
+    color: #fff;
+    text-decoration: none;
+    background-color: #FF9517;
+    opacity: 1;
+    transition: 3.5ms;
+}
+/* COUNTDOWN */
+.card-count-sma{
+    padding: 180px 187px;
+}
+.card-count-sma h2{
+    font-weight: 700;
+    color: #669c20;
+    margin-bottom: 12px;
+}
+.card-count-smk{
+    padding: 12% 2% 12% 40%;
+}
+.card-count-smk h2{
+    font-weight: 700;
+    color: #00ADEE;
+    margin-bottom: 12px;
+}
+/* MEDIA SOSIAL */
+.medsos{
+    display: flex;
+    
+}
+.link{
+    text-align: center;
+    margin: 5px 10px;
+    color: #9E9E9E;
+}
+.link i{
+    font-size: 40px;
+    margin-bottom: 8px;
+}
 /* FOOTER */
 footer{
     padding: 80px 0;
@@ -145,4 +302,141 @@ footer img{
 }
 .text-footer hr{
     border-top: 1px solid #fff;
+}
+
+
+::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #FF9517;
+}
+
+/* REGISTER */
+.header{
+    background-image: url('/assets/images/bg-header.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+.title-register{
+    color: #fff;
+    text-shadow: -3px 2px #8bc53f;
+    margin-bottom: 50px;
+}
+.logo-reg{
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+.txt-sma h3{
+    color: #8BC53F;
+}
+.input-nisn{    
+    display: block;
+    width: fit-content;
+    padding: 6px;
+    border-radius: 24px;
+}
+.input-nisn input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;    
+}
+.input-nisn input:focus{
+    outline: none;
+}
+.input-nisn button{
+    outline: none;
+    border: none;    
+    color: #fff;
+    border-radius: 19px;
+    padding: 5px 16px;
+}
+.txt-sma .input-nisn{
+    border: 1px solid #8BC53F;
+}
+.txt-sma .input-nisn button{
+    background-color: #8BC53F;
+}
+
+.txt-smk h3{
+    color: #00ADEE;
+}
+.txt-smk .input-nisn{
+    border: 1px solid #00ADEE;
+}
+.txt-smk .input-nisn button{
+    background-color: #00ADEE;
+}
+
+
+
+/* Responsive */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .navbar-brand .logo{
+        width: 100px;    
+    }
+    .text-banner img{
+        width: 55%;
+    } 
+    .text-banner h1{
+        font-size: 2rem;
+    }
+    .hero img {
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+    .text-video h1{
+        font-size: 2rem;
+    }
+    .countdown-wrapper{
+        left: 0 !important;
+    }
+    .medsos{
+        flex-direction: column;
+    }
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+}
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    
 }

@@ -1,0 +1,34 @@
+.countdown-wrapper {
+  width: fit-content;
+  /* margin: auto;   */
+  margin-top: 40px;
+}
+
+.countdown-sma.flip-clock-wrapper ul li a div div.inn {
+  background-color: #fff;
+  color: #90278E;
+  text-shadow: 0 1px 2px rgb(107, 107, 107);
+}
+
+.countdown-sma .flip-clock-dot {
+  background: #fff;
+}
+
+.countdown-sma .flip-clock-divider .flip-clock-label {
+  color: #90278E;
+}
+
+.countdown-smk.flip-clock-wrapper ul li a div div.inn {
+  background-color: #fff;
+  color: #FF9517;
+  text-shadow: 0 1px 2px rgb(107, 107, 107);
+}
+
+.countdown-smk .flip-clock-dot {
+  background: #fff;
+}
+
+.countdown-smk .flip-clock-divider .flip-clock-label {
+  color: #FF9517;
+}
+/*# sourceMappingURL=countdown.css.map */
