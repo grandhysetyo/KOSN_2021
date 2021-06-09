@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card | SHILA</title>
+</head>
+<style>
+    .container{
+        background-image: url('/assets/images/shila-idcard.jpg');
+        background-position: left;
+        background-size: cover;
+        width: 680px;
+        height: 1080px;
+        background-repeat: no-repeat;
+    }
+    .photo{
+        width: 340px;
+        height: 340px;
+        object-position: center;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        position: relative;
+        top: 15%;
+        left: 24%;
+    }
+    .biodata{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 70%;
+        height: 13%;
+        top: 30%;
+        left: 14%;
+        font-size: 2rem;
+        padding: 1%;
+    }
+    
+    .form-input{
+        margin-top: 20px;        
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+    }
+    .form-input input, label, button{
+        margin: 5px;
+    }
+    .tab {
+            display: inline-block;
+            margin-left: 20px;
+    }
+</style>
+<body>
+    
+    <div id="card" class="container">
+        <img id="output" src="/assets/images/idcard-tes.jpeg" class="photo" alt="photo" />
+        <div class="biodata">            
+            <div class="text">
+                <span>Nama</span>
+                <span>:</span>
+                <span class="" id="nama">Grandhys</span>
+            </div>
+            <div class="text">
+                <span>Sekolah</span>
+                <span>:</span>
+                <span class="" id="sekolah">Grandhys</span>
+            </div>
+            <div class="text">
+                <span>Provinsi</span>
+                <span>:</span>
+                <span class="" id="provinsi">Grandhys</span>
+            </div>
+        </div>
+    </div>  
+    <div class="form-input">
+        <input type="file" accept="image/*" onchange="loadFile(event)">
+        <label>Nama :</label>
+        <input type="text" id="nama-input" onchange="changeNama()"/>
+        <label>Sekolah :</label>
+        <input type="text" id="sekolah-input" onchange="changeSekolah()"/>
+        <label>Provinsi :</label>
+        <input type="text" id="provinsi-input" onchange="changeProvinsi()"/> 
+        <button id="btn-download">Download</button>
+    </div>
+    
+
+    
+    <script type="text/javascript"  src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script language="javascript">
+        var loadFile = function(event) {
+            var output = document.getElementById('output');
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = function() {
+            URL.revokeObjectURL(output.src) // free memory
+            }
+        };
+        function changeNama(){
+            var nama = document.getElementById("nama-input").value;
+            document.getElementById("nama").innerHTML = nama; 
+        }
+        function changeSekolah(){
+            var sekolah = document.getElementById("sekolah-input").value;
+            document.getElementById("sekolah").innerHTML =  sekolah; 
+        }
+        function changeProvinsi(){
+            var provinsi = document.getElementById("provinsi-input").value;
+            document.getElementById("provinsi").innerHTML =  provinsi; 
+        }
+        $(document).ready(function() {
+            
+            var download = document.getElementById("btn-download");
+            download.addEventListener("click", function(){
+                html2canvas(document.querySelector("#card")).then(canvas => {
+                    var link = document.createElement('a');
+                    link.download = 'filename.png';
+                    link.href = canvas.toDataURL()
+                    link.click();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
