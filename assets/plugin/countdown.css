@@ -1,3 +1,13 @@
+.bg-countSMA{
+  background-image: url('/assets/images/bg-count-sma.png'); 
+  background-position: right; 
+  background-repeat: no-repeat;
+}
+.bg-countSMK{
+  background-image: url('/assets/images/bg-count-smk.png'); 
+  background-position: left; 
+  background-repeat: no-repeat;
+}
 .countdown-wrapper {
   width: fit-content;
   /* margin: auto;   */
@@ -31,4 +41,20 @@
 .countdown-smk .flip-clock-divider .flip-clock-label {
   color: #FF9517;
 }
-/*# sourceMappingURL=countdown.css.map */
+/* Tablet && Phone*/
+@media  (max-width: 991.98px) {  
+  .bg-countSMA{
+    background-image: none;
+  }
+  .bg-countSMK{
+    background-image: none;
+  }
+  .card-count-sma{
+    padding: 5%;
+  }
+  .card-count-smk{
+    padding: 5%;
+  }
+}
+
+
