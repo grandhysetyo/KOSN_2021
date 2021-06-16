@@ -91,7 +91,7 @@ section{
 }
 /* BANNER */
 .banner{
-    background-image: url('/assets/images/bg-header.png');
+    background-image: url('/KOSN_2021/assets/images/bg-header.png');
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -155,7 +155,7 @@ section{
 
 /* VIDEO SLIDER */
 .video{
-    background-image: url('/assets/images/bg-video.png');
+    background-image: url('/KOSN_2021/assets/images/bg-video.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -333,7 +333,7 @@ footer img{
 
 /* REGISTER */
 .header{
-    background-image: url('/assets/images/bg-header.png');
+    background-image: url('/KOSN_2021/assets/images/bg-header.png');
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -364,6 +364,16 @@ footer img{
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: hidden;    
+}
+/* Chrome, Safari, Edge, Opera */
+.input-nisn input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.input-nisn input[type=number] {
+    -moz-appearance: textfield;
 }
 .input-nisn input:focus{
     outline: none;
